@@ -211,10 +211,12 @@ h1 {
 }
 .work p { margin: 0; font-size: 0.88rem; }
 
-.note {
-  font-size: 0.82rem;
-  letter-spacing: 0.04em;
-  color: var(--text-muted);
+.card .note {
+  font-size: 1.2rem;
+  letter-spacing: 0.02em;
+  color: var(--light);
+  font-weight: 600;
+  line-height: 1.55;
 }
 
 .card input,
@@ -224,8 +226,16 @@ h1 {
   border: 0;
   border-bottom: 1px solid color-mix(in srgb, var(--light) 35%, transparent);
   color: var(--light);
-  padding: 0.6rem 0;
+  padding: 0.65rem 0.85rem;
   margin-bottom: 0.8rem;
+}
+.card input:focus,
+.card input:focus-visible,
+.card textarea:focus,
+.card textarea:focus-visible {
+  outline: none;
+  border-bottom-color: var(--light);
+  box-shadow: 0 0 0 2px var(--light);
 }
 .card label {
   display: block;
