@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dominik Kowalec — strony internetowe</title>
+  <meta name="description" content="Freelance: projekt i wdrożenie stron oraz ich utrzymanie. Współpraca na umowę o dzieło — określony zakres, odbiór, przekazanie kodu.">
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body class="site">
+  <div class="frame">
+    <div class="diamond" aria-hidden="true">◇</div>
+    <div class="stem" aria-hidden="true"></div>
+    <div class="line"></div>
+    <h1>DOMINIK KOWALEC</h1>
+    <p class="lead">
+      Tworzenie i utrzymanie stron internetowych.
+    </p>
+    <div class="line"></div>
+    <div class="seg">
+      <button type="button" data-open="intro">Oferta</button>
+      <button type="button" data-open="work">Prace</button>
+      <button type="button" data-open="about">O mnie</button>
+      <button type="button" data-open="contact">Kontakt</button>
+    </div>
+    <p class="copy">© 2026 Dominik Kowalec</p>
+  </div>
+
+  <div class="overlay" id="overlay" aria-hidden="true">
+    <div class="card" role="dialog" aria-modal="true">
+      <button class="close" type="button" aria-label="Zamknij">×</button>
+
+      <div data-panel="intro">
+        <h2>Oferta</h2>
+        <p>
+          Oferuję wykonanie oraz utrzymanie stron interntowych w oprarciu o umowę o dzieło.
+          Dostosowuję strony bezpośrenido do potrzeb klienta, w konkretnie określonym zakresie,
+          bądź według proponowanych przeze mnie szablonów.
+        </p>
+        <ul class="services">
+          <li>
+            <strong>Nowa strona</strong>
+            Wizytówka, one-page, katalog albo prosty sklep. Od układu i treści po wdrożenie
+            i przekazanie kodu oraz instrukcji.
+          </li>
+          <li>
+            <strong>Przebudowa</strong>
+            Przebudowuję stare witryny internetowe dając im nowe życie, 
+            a Twojej firmie - świeżą wizytkówę.
+          </li>
+          <li>
+            <strong>Utrzymanie</strong>
+            Oferuję aktualizowanie strony oraz uzupełnianie jej od dodatkowe wymagane treści
+          </li>
+        </ul>
+      </div>
+
+      <div data-panel="work" hidden>
+        <h2>Prace</h2>
+        <p>Na ten moment nie posiadam prac, którymi mogę się pochwalić. Skorzystaj z moich usług
+          i znajdź się w tej zakładce!
+        </p>
+      </div>
+
+      <div data-panel="about" hidden>
+        <h2>O mnie</h2>
+        <p>
+          Jestem studentem informatyki i rozpoczynam swoją przygodę w świadczeniu 
+          usług jako freelancer.
+          Swoje usługi krieruję głównie do lokalnych firm ale nie boję się większych wyzwań.
+        </p>
+        <p>
+          Współpracę podjemuję na podstawie <strong>umowy o dzieło</strong>. Najpierw wspólnie spisujemy, co ma
+          powstać - podstrony, zdjęcia, formularze itp. 
+          Następnie umowa, propozycje, wdrożenie i odbiór. Poprawki z protokołu są w cenie a
+          nowe pomysły po starcie — kolejnym dziełem.
+        </p>
+        <p>
+          Utrzymanie też zamykam w umowie: konkretny okres, lista czynności czy też raport końcowy.
+        </p>
+      </div>
+
+      <div data-panel="contact" hidden>
+        <h2>Kontakt</h2>
+        <p>
+          Napisz lub zadzwoń i powiedz czego potrzebujesz.
+          W ciągu kilku dni wróćę ze wstępną propozycją.
+        </p>
+        <p class="note">dkowalec4@gmail.com · +48 795 481 775  · Piła</p>
+        <form id="brief">
+          <label for="name">Imię</label>
+          <input id="name" name="name" required placeholder="Imię">
+          <label for="email">E-mail</label>
+          <input id="email" name="email" type="email" required placeholder="adres@firma.pl">
+          <label for="message">Zakres</label>
+          <textarea id="message" name="message" rows="4" required placeholder="Nowa strona / przebudowa ..."></textarea>
+          <button class="btn" type="submit">Wyślij zapytanie</button>
+          <p class="status" id="form-status" role="status"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="js/site.js"></script>
+</body>
+</html>
