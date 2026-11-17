@@ -251,6 +251,19 @@ h1 {
   letter-spacing: 0.06em;
   margin: 0.7rem 0 0;
 }
+.status--ok { color: #9ec7b0; }
+.status--err { color: #e7b0b0; }
+.hp {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.btn:disabled {
+  opacity: 0.55;
+  cursor: wait;
+}
 
 @media (max-width: 600px) {
   .seg { grid-template-columns: 1fr 1fr; }

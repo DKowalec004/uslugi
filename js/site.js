@@ -33,9 +33,41 @@
     if (e.key === "Escape" && overlay.classList.contains("is-open")) closePanel();
   });
 
-  form.addEventListener("submit", (e) => {
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
-    status.textContent = "Dziękuję. Odezwię się w ciągu jednego dnia roboczego — na razie to podgląd formularza, bez wysyłki.";
-    form.reset();
+    const btn = form.querySelector("[type=submit]");
+    const label = btn.textContent;
+    status.textContent = "";
+    status.classList.remove("status--ok", "status--err");
+    form.setAttribute("aria-busy", "true");
+    btn.disabled = true;
+    btn.textContent = "Wysyłanie…";
+
+    try {
+      const res = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" },
+      });
+      const data = await res.json().catch(() => ({}));
+      if (res.ok) {
+        form.reset();
+        status.textContent = "Dziękuję. Odezwę się w ciągu kilku dni.";
+        status.classList.add("status--ok");
+      } else {
+        const fromApi = Array.isArray(data.errors)
+          ? data.errors.map((err) => err.message).filter(Boolean).join(" ")
+          : "";
+        status.textContent = fromApi || "Nie udało się wysłać. Spróbuj jeszcze raz albo napisz na kontakt@kowalecweb.pl.";
+        status.classList.add("status--err");
+      }
+    } catch {
+      status.textContent = "Brak połączenia. Sprawdź sieć albo napisz na kontakt@kowalecweb.pl.";
+      status.classList.add("status--err");
+    } finally {
+      form.removeAttribute("aria-busy");
+      btn.disabled = false;
+      btn.textContent = label;
+    }
   });
 })();

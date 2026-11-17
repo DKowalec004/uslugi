@@ -86,12 +86,17 @@
           Napisz lub zadzwoń i powiedz czego potrzebujesz.
           W ciągu kilku dni wróćę ze wstępną propozycją.
         </p>
-        <p class="note">dkowalec4@gmail.com · +48 795 481 775  · Piła</p>
-        <form id="brief">
+        <p class="note">kontakt@kowalecweb.pl · +48 795 481 775  · Piła</p>
+        <form id="brief" action="https://formspree.io/f/mbgooany" method="POST">
+          <input type="hidden" name="_subject" value="Zapytanie ze strony kowalecweb.pl">
+          <p class="hp" aria-hidden="true">
+            <label for="company">Nie wypełniaj</label>
+            <input id="company" type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+          </p>
           <label for="name">Imię</label>
-          <input id="name" name="name" required placeholder="Imię">
+          <input id="name" name="name" required placeholder="Imię" autocomplete="name">
           <label for="email">E-mail</label>
-          <input id="email" name="email" type="email" required placeholder="adres@firma.pl">
+          <input id="email" name="email" type="email" required placeholder="adres@firma.pl" autocomplete="email">
           <label for="message">Zakres</label>
           <textarea id="message" name="message" rows="4" required placeholder="Nowa strona / przebudowa ..."></textarea>
           <button class="btn" type="submit">Wyślij zapytanie</button>
