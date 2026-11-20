@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pl" data-template="massively">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Massively — szablon</title>
+  <link rel="stylesheet" href="../css/switcher.css">
+  <link rel="stylesheet" href="../css/templates/massively.css">
+  <script src="../js/palettes.js"></script>
+  <script src="../js/examples.js"></script>
+  <script src="../js/switcher.js" defer></script>
+</head>
+<body class="massively">
+  <section class="intro" data-img="hero" style="--img: url('https://picsum.photos/seed/massively-hero/1600/1100')">
+    <div class="intro-inner">
+      <h1 data-fill="intro-title">THIS IS<br>MASSIVELY</h1>
+      <p data-fill="intro-lead">
+        Szablon magazynu z intro na fotografii i arkuszem treści.
+        Placeholder lead — <a href="#main">zobacz wpisy</a>.
+      </p>
+      <a class="chevron" href="#main" aria-label="Dalej">↓</a>
+    </div>
+  </section>
+
+  <div class="sheet-wrap" id="main">
+    <div class="logo-box" data-fill="brand">MASSIVELY</div>
+    <div class="sheet">
+      <nav class="tabs">
+        <a class="is-active" href="#main" data-fill="nav-1">This is Massively</a>
+        <a href="#main" data-fill="nav-2">Generic Page</a>
+        <a href="#main" data-fill="nav-3">Elements Reference</a>
+        <div class="social">
+          <a href="#main" aria-label="Twitter">𝕏</a>
+          <a href="#main" aria-label="Facebook">f</a>
+          <a href="#main" aria-label="Instagram">◎</a>
+          <a href="#main" aria-label="GitHub">⌥</a>
+        </div>
+      </nav>
+
+      <article class="featured">
+        <p class="date" data-fill="feat-date">25 kwietnia 2026</p>
+        <h2><a href="#main" data-fill="feat-title">And this is a massive headline</a></h2>
+        <p class="lead" data-fill="feat-lead">Lead zastępczy. Krótki wstęp do wyróżnionego wpisu, wyśrodkowany kursywą pod datą z liniami.</p>
+        <div class="media media--ph" data-img="feat" style="--img: url('https://picsum.photos/seed/massively-1/1200/640')"></div>
+        <a class="btn" href="#main" data-fill="feat-cta">Full Story</a>
+      </article>
+
+      <div class="posts">
+        <article class="post">
+          <p class="date" data-fill="p1-date">24 kwietnia 2026</p>
+          <h2><a href="#main" data-fill="p1-title">Sed magna ipsum</a></h2>
+          <p class="lead" data-fill="p1-lead">Placeholder akapitu — dwa, trzy zdania opisu karty magazynu.</p>
+          <div class="media media--ph" data-img="p1" style="--img: url('https://picsum.photos/seed/massively-2/800/500')"></div>
+          <a class="btn" href="#main" data-fill="post-cta">Full Story</a>
+        </article>
+        <article class="post">
+          <p class="date" data-fill="p2-date">22 kwietnia 2026</p>
+          <h2><a href="#main" data-fill="p2-title">Primis eget lorem</a></h2>
+          <p class="lead" data-fill="p2-lead">Druga karta w siatce 2 kolumny, ten sam rytm: data, tytuł, lead, zdjęcie, CTA.</p>
+          <div class="media media--ph" data-img="p2" style="--img: url('https://picsum.photos/seed/massively-3/800/500')"></div>
+          <a class="btn" href="#main" data-fill="post-cta">Full Story</a>
+        </article>
+        <article class="post">
+          <p class="date" data-fill="p3-date">18 kwietnia 2026</p>
+          <h2><a href="#main" data-fill="p3-title">Ante mattis dolor</a></h2>
+          <p class="lead" data-fill="p3-lead">Kolejny wpis zastępczy w rytmie editorial.</p>
+          <div class="media media--ph" data-img="p3" style="--img: url('https://picsum.photos/seed/massively-4/800/500')"></div>
+          <a class="btn" href="#main" data-fill="post-cta">Full Story</a>
+        </article>
+        <article class="post">
+          <p class="date" data-fill="p4-date">12 kwietnia 2026</p>
+          <h2><a href="#main" data-fill="p4-title">Tempus sed nulla</a></h2>
+          <p class="lead" data-fill="p4-lead">Ostatnia karta w widoku, paginacja pod spodem.</p>
+          <div class="media media--ph" data-img="p4" style="--img: url('https://picsum.photos/seed/massively-5/800/500')"></div>
+          <a class="btn" href="#main" data-fill="post-cta">Full Story</a>
+        </article>
+      </div>
+
+      <ol class="pager">
+        <li><span class="is-active">1</span></li>
+        <li><a href="#main">2</a></li>
+        <li><a href="#main">3</a></li>
+        <li><a href="#main" aria-label="Następna strona">→</a></li>
+      </ol>
+
+      <footer class="footer">
+        <form>
+          <label>Imię <input data-ph="name" placeholder="Imię"></label>
+          <label>E-mail <input data-ph="email" placeholder="E-mail"></label>
+          <label>Wiadomość <textarea data-ph="message" rows="4" placeholder="Wiadomość"></textarea></label>
+          <button class="btn" type="button" data-fill="btn-send">Send Message</button>
+        </form>
+        <div>
+          <h3 data-fill="h-address">Address</h3>
+          <p data-fill="address">1234 Somewhere Road, Placeholder</p>
+          <h3 data-fill="h-phone">Phone</h3>
+          <p><a href="#main" data-fill="phone">(000) 000-0000</a></p>
+          <h3 data-fill="h-email">Email</h3>
+          <p><a href="#main" data-fill="email">info@placeholder.tld</a></p>
+        </div>
+      </footer>
+      <p class="copy">
+        <span data-fill="copy">© Untitled · Design inspired by HTML5 UP · Zdjęcia: Picsum</span>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

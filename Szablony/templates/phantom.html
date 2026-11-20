@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pl" data-template="phantom">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Phantom — szablon</title>
+  <link rel="stylesheet" href="../css/switcher.css">
+  <link rel="stylesheet" href="../css/templates/phantom.css">
+  <script src="../js/palettes.js"></script>
+  <script src="../js/examples.js"></script>
+  <script src="../js/switcher.js" defer></script>
+</head>
+<body class="phantom">
+  <div class="wrap">
+    <header class="head">
+      <a class="brand" href="#top" data-fill="brand">⬡ PHANTOM</a>
+      <div class="menu-wrap">
+        <button class="menu-btn" id="open" type="button" aria-label="Menu" aria-expanded="false" aria-controls="drop">☰</button>
+        <nav class="drop" id="drop">
+          <a href="#top" data-fill="m-home">Home</a>
+          <a href="#katalog" data-fill="m-shop">Generic</a>
+          <a href="#pracownia" data-fill="m-studio">Elements</a>
+          <a href="#kontakt" data-fill="m-contact">Kontakt</a>
+        </nav>
+      </div>
+    </header>
+    <section class="intro" id="top">
+      <h1 data-fill="intro-title">This is Phantom, a free, fully responsive site template designed by HTML5 UP.</h1>
+      <p data-fill="intro-lead">Placeholder lead pod dużym H1. Siatka kwadratowych kart ze szkłem i przekątnymi liniami.</p>
+    </section>
+    <section class="catalog" id="katalog">
+      <h2 data-fill="cat-title">Generic</h2>
+      <p class="lead" data-fill="cat-lead">Katalog kart — każda pozycja to kafelek ze zdjęciem i nazwą. Placeholder listy produktów albo usług.</p>
+      <div class="grid">
+        <a class="card" data-img="c1" style="--tint: var(--tile-1); --img: url('https://picsum.photos/seed/ph-1/600/600')" href="#katalog"><span data-fill="c1">Magna</span></a>
+        <a class="card" data-img="c2" style="--tint: var(--tile-2); --img: url('https://picsum.photos/seed/ph-2/600/600')" href="#katalog"><span data-fill="c2">Lorem</span></a>
+        <a class="card" data-img="c3" style="--tint: var(--tile-3); --img: url('https://picsum.photos/seed/ph-3/600/600')" href="#katalog"><span data-fill="c3">Feugiat</span></a>
+        <a class="card" data-img="c4" style="--tint: var(--tile-4); --img: url('https://picsum.photos/seed/ph-4/600/600')" href="#katalog"><span data-fill="c4">Tempus</span></a>
+        <a class="card" data-img="c5" style="--tint: var(--tile-5); --img: url('https://picsum.photos/seed/ph-5/600/600')" href="#katalog"><span data-fill="c5">Aliquam</span></a>
+        <a class="card" data-img="c6" style="--tint: var(--tile-6); --img: url('https://picsum.photos/seed/ph-6/600/600')" href="#katalog"><span data-fill="c6">Veroeros</span></a>
+        <a class="card" data-img="c7" style="--tint: var(--c2); --img: url('https://picsum.photos/seed/ph-7/600/600')" href="#katalog"><span data-fill="c7">Ipsum</span></a>
+        <a class="card" data-img="c8" style="--tint: var(--c4); --img: url('https://picsum.photos/seed/ph-8/600/600')" href="#katalog"><span data-fill="c8">Dolor</span></a>
+        <a class="card" data-img="c9" style="--tint: var(--accent); --img: url('https://picsum.photos/seed/ph-9/600/600')" href="#katalog"><span data-fill="c9">Nullam</span></a>
+      </div>
+    </section>
+    <section class="studio" id="pracownia">
+      <h2 data-fill="studio-title">Elements</h2>
+      <p class="lead" data-fill="studio-lead">Podstrona pracowni: skąd biorą się rzeczy, jak wygląda proces i co można zobaczyć na miejscu.</p>
+      <div class="studio-grid">
+        <div class="media media--ph" data-img="s1" style="--img: url('https://picsum.photos/seed/ph-studio/800/560')"></div>
+        <div>
+          <h3 data-fill="studio-h">Warsztat</h3>
+          <p data-fill="studio-p">Placeholder opisu miejsca: godziny otwarcia, dojazd, krótka historia. Tu mieszczą się też techniki, glina, wypał albo inny proces marki.</p>
+          <ul class="studio-list">
+            <li data-fill="studio-f1">Krok 1 — szkic i próba</li>
+            <li data-fill="studio-f2">Krok 2 — wykonanie</li>
+            <li data-fill="studio-f3">Krok 3 — odbiór albo wysyłka</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <footer class="foot" id="kontakt">
+      <form>
+        <h2 data-fill="form-title">Get in touch</h2>
+        <p class="lead" data-fill="form-lead">Formularz zamówienia albo pytania. Odpowiedź w kilka dni roboczych.</p>
+        <input data-ph="name" placeholder="Name">
+        <input data-ph="email" placeholder="Email">
+        <textarea data-ph="message" rows="4" placeholder="Message"></textarea>
+        <button class="send" type="button" data-fill="btn-send">Send</button>
+      </form>
+      <div>
+        <h2 data-fill="follow-title">Follow</h2>
+        <p data-fill="follow">Twitter · Facebook · Instagram · Dribbble · GitHub</p>
+        <p data-fill="contact-meta">ul. Placeholder 4 · 00-000 Miasto · +48 000 000 000</p>
+      </div>
+    </footer>
+  </div>
+  <script>
+    (function () {
+      const btn = document.getElementById("open");
+      const drop = document.getElementById("drop");
+      const wrap = btn.closest(".menu-wrap");
+      function isOpen() { return drop.classList.contains("is-open"); }
+      function open() {
+        drop.classList.add("is-open");
+        btn.setAttribute("aria-expanded", "true");
+      }
+      function close() {
+        drop.classList.remove("is-open");
+        btn.setAttribute("aria-expanded", "false");
+      }
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        isOpen() ? close() : open();
+      });
+      drop.querySelectorAll("a").forEach((a) => a.addEventListener("click", close));
+      document.addEventListener("click", (e) => {
+        if (!wrap.contains(e.target)) close();
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") close();
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pl" data-template="bloom">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bloom — szablon</title>
+  <link rel="stylesheet" href="../css/switcher.css">
+  <link rel="stylesheet" href="../css/templates/bloom.css">
+  <script src="../js/palettes.js"></script>
+  <script src="../js/examples.js"></script>
+  <script src="../js/switcher.js" defer></script>
+</head>
+<body class="bloom">
+  <header class="head">
+    <a class="brand" href="#top" data-fill="brand">BLOOM</a>
+    <nav>
+      <a href="#zabiegi" data-fill="n1">Zabiegi</a>
+      <a href="#zespol" data-fill="n2">Zespół</a>
+      <a href="#galeria" data-fill="n3">Galeria</a>
+      <a href="#rezerwacja" data-fill="n4">Kontakt</a>
+    </nav>
+    <a class="phone" href="#rezerwacja" data-fill="phone">+48 000 000 000</a>
+    <a class="btn" href="#rezerwacja" data-fill="book">Zarezerwuj</a>
+  </header>
+
+  <section class="hero" id="top">
+    <div class="copy">
+      <p class="kicker" data-fill="kicker">Gabinet · pielęgnacja · rytuał</p>
+      <h1 data-fill="hero-title">Pielęgnacja, która nie krzyczy</h1>
+      <p data-fill="hero-lead">Placeholder manifestu studia beauty: spokojne intro, jeden przycisk rezerwacji, zdjęcie zabiegu po prawej.</p>
+      <a class="btn" href="#rezerwacja" data-fill="hero-cta">Umów wizytę</a>
+    </div>
+    <div class="media media--ph" data-img="hero" style="--img: url('https://picsum.photos/seed/bloom-hero/900/1100')"></div>
+  </section>
+
+  <section class="treatments" id="zabiegi">
+    <h2 data-fill="treat-title">Zabiegi</h2>
+    <p class="lead" data-fill="treat-lead">Cennik w rytmie nazwa · czas · cena. Placeholder listy usług gabinetu.</p>
+    <ul class="list">
+      <li><span data-fill="t1-n">Zabieg pierwszy</span><span data-fill="t1-m">60 min</span><strong data-fill="t1-p">000 zł</strong></li>
+      <li><span data-fill="t2-n">Zabieg drugi</span><span data-fill="t2-m">75 min</span><strong data-fill="t2-p">000 zł</strong></li>
+      <li><span data-fill="t3-n">Zabieg trzeci</span><span data-fill="t3-m">90 min</span><strong data-fill="t3-p">000 zł</strong></li>
+      <li><span data-fill="t4-n">Zabieg czwarty</span><span data-fill="t4-m">45 min</span><strong data-fill="t4-p">000 zł</strong></li>
+      <li><span data-fill="t5-n">Zabieg piąty</span><span data-fill="t5-m">120 min</span><strong data-fill="t5-p">000 zł</strong></li>
+      <li><span data-fill="t6-n">Zabieg szósty</span><span data-fill="t6-m">50 min</span><strong data-fill="t6-p">000 zł</strong></li>
+    </ul>
+  </section>
+
+  <section class="team" id="zespol">
+    <h2 data-fill="team-title">Zespół</h2>
+    <div class="people">
+      <article>
+        <div class="media media--ph" data-img="a1" style="--img: url('https://picsum.photos/seed/bloom-a/500/620')"></div>
+        <h3 data-fill="a1-n">Imię 1</h3>
+        <p data-fill="a1-r">Kosmetolog</p>
+      </article>
+      <article>
+        <div class="media media--ph" data-img="a2" style="--img: url('https://picsum.photos/seed/bloom-b/500/620')"></div>
+        <h3 data-fill="a2-n">Imię 2</h3>
+        <p data-fill="a2-r">Stylizacja</p>
+      </article>
+      <article>
+        <div class="media media--ph" data-img="a3" style="--img: url('https://picsum.photos/seed/bloom-c/500/620')"></div>
+        <h3 data-fill="a3-n">Imię 3</h3>
+        <p data-fill="a3-r">Masaż</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="gallery" id="galeria">
+    <h2 data-fill="gallery-title">Galeria</h2>
+    <div class="media media--ph" data-img="g1" style="--img: url('https://picsum.photos/seed/bloom-g1/600/500')"></div>
+    <div class="media media--ph" data-img="g2" style="--img: url('https://picsum.photos/seed/bloom-g2/600/500')"></div>
+    <div class="media media--ph" data-img="g3" style="--img: url('https://picsum.photos/seed/bloom-g3/600/500')"></div>
+    <div class="media media--ph" data-img="g4" style="--img: url('https://picsum.photos/seed/bloom-g4/600/500')"></div>
+    <div class="media media--ph" data-img="g5" style="--img: url('https://picsum.photos/seed/bloom-g5/600/500')"></div>
+    <div class="media media--ph" data-img="g6" style="--img: url('https://picsum.photos/seed/bloom-g6/600/500')"></div>
+  </section>
+
+  <section class="book" id="rezerwacja">
+    <form>
+      <h2 data-fill="book-title">Rezerwacja</h2>
+      <p data-fill="book-lead">Placeholder formularza wizyty. Studio oddzwania w ten sam dzień.</p>
+      <input data-ph="name" placeholder="Imię">
+      <input data-ph="phone" placeholder="Telefon">
+      <input data-ph="treat" placeholder="Zabieg">
+      <textarea data-ph="note" rows="3" placeholder="Uwagi (termin, alergie)"></textarea>
+      <button class="btn" type="button" data-fill="book-btn">Wyślij zgłoszenie</button>
+    </form>
+    <aside>
+      <h2 data-fill="hours-t">Godziny</h2>
+      <p data-fill="hours">Wt–pt 10:00–20:00<br>Sobota 9:00–15:00<br>Niedziela i poniedziałek — nieczynne</p>
+      <h2 data-fill="addr-t">Adres</h2>
+      <p data-fill="address">ul. Placeholder 8, 00-000 Miasto</p>
+    </aside>
+  </section>
+</body>
+</html>

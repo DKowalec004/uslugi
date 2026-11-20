@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pl" data-template="editorial">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Editorial — szablon</title>
+  <link rel="stylesheet" href="../css/switcher.css">
+  <link rel="stylesheet" href="../css/templates/editorial.css">
+  <script src="../js/palettes.js"></script>
+  <script src="../js/examples.js"></script>
+  <script src="../js/switcher.js" defer></script>
+</head>
+<body class="editorial">
+  <aside class="side" id="side">
+    <input class="search" data-ph="search" placeholder="Search" aria-label="Szukaj">
+    <h2 data-fill="menu-title">Menu</h2>
+    <ul class="menu">
+      <li><a class="is-active" href="#home" data-page="home" data-fill="nav-1">Homepage</a></li>
+      <li><a href="#generic" data-page="generic" data-fill="nav-2">Generic</a></li>
+      <li><a href="#elements" data-page="elements" data-fill="nav-3">Elements</a></li>
+      <li class="open">
+        <a href="#submenu" data-page="submenu" data-fill="nav-4">Submenu ▾</a>
+        <div class="sub">
+          <a href="#lorem" data-page="lorem" data-fill="nav-4a">Lorem Dolor</a>
+          <a href="#ipsum" data-page="ipsum" data-fill="nav-4b">Ipsum Adipiscing</a>
+        </div>
+      </li>
+      <li><a href="#etiam" data-page="etiam" data-fill="nav-5">Etiam Dolore</a></li>
+      <li><a href="#contact" data-page="contact" data-fill="nav-6">Adipiscing</a></li>
+    </ul>
+    <div class="mini">
+      <h2 data-fill="mini-title">Ante interdum</h2>
+      <div class="media media--ph" data-img="side" style="--img: url('https://picsum.photos/seed/ed-side/400/240')"></div>
+      <p data-fill="mini-text">Mini-widget w sidebarze: miniatura i krótki tekst zastępczy.</p>
+    </div>
+  </aside>
+
+  <main class="main" id="top">
+    <div class="top">
+      <button class="toggle" type="button" id="toggle" aria-label="Menu">☰</button>
+      <a class="wordmark" href="#home" data-page="home" data-fill="wordmark">Editorial by HTML5 UP</a>
+      <div class="social">
+        <a href="#home">𝕏</a><a href="#home">f</a><a href="#home">◎</a><a href="#home">M</a>
+      </div>
+    </div>
+
+    <section class="view" data-page-view="home" id="home">
+      <section class="hero">
+        <div>
+          <h1 data-fill="hero-title">Hi, I’m Editorial by HTML5 UP</h1>
+          <p class="kicker" data-fill="kicker">A free and fully responsive site template</p>
+          <p data-fill="hero-lead">Placeholder akapitu w kolumnie tekstu. Layout 50/50 z zdjęciem po prawej, przycisk outline LEARN MORE.</p>
+          <a class="btn" href="#generic" data-page="generic" data-fill="hero-cta">Learn More</a>
+        </div>
+        <div class="media media--ph" data-img="hero" style="--img: url('https://picsum.photos/seed/ed-hero/800/640')"></div>
+      </section>
+
+      <h2 data-fill="feat-title">Erat lacinia</h2>
+      <div class="features">
+        <article><div class="icon">⌘</div><h3 data-fill="f1-title">Portitor</h3><p data-fill="f1-text">Krótki opis ikony w siatce trzech kolumn.</p></article>
+        <article><div class="icon">◈</div><h3 data-fill="f2-title">Sapien</h3><p data-fill="f2-text">Drugi feature z placeholderem.</p></article>
+        <article><div class="icon">△</div><h3 data-fill="f3-title">Quam lorem</h3><p data-fill="f3-text">Trzeci kafelek opisu.</p></article>
+      </div>
+
+      <h2 id="posts" data-fill="posts-title">Ipsum sed dolor</h2>
+      <div class="posts">
+        <article class="post">
+          <div class="media media--ph" data-img="a1" style="--img: url('https://picsum.photos/seed/ed-1/640/400')"></div>
+          <h3 data-fill="a1-title">Interdum aenean</h3>
+          <p data-fill="a1-text">Lead zastępczy karty wpisu.</p>
+          <a class="more" href="#generic" data-page="generic" data-fill="more">More</a>
+        </article>
+        <article class="post">
+          <div class="media media--ph" data-img="a2" style="--img: url('https://picsum.photos/seed/ed-2/640/400')"></div>
+          <h3 data-fill="a2-title">Nulla amet dolore</h3>
+          <p data-fill="a2-text">Druga karta w siatce 2×N.</p>
+          <a class="more" href="#elements" data-page="elements" data-fill="more">More</a>
+        </article>
+        <article class="post">
+          <div class="media media--ph" data-img="a3" style="--img: url('https://picsum.photos/seed/ed-3/640/400')"></div>
+          <h3 data-fill="a3-title">Tempus ullamcorper</h3>
+          <p data-fill="a3-text">Kolejny placeholder.</p>
+          <a class="more" href="#lorem" data-page="lorem" data-fill="more">More</a>
+        </article>
+        <article class="post">
+          <div class="media media--ph" data-img="a4" style="--img: url('https://picsum.photos/seed/ed-4/640/400')"></div>
+          <h3 data-fill="a4-title">Sed etiam facilis</h3>
+          <p data-fill="a4-text">Ostatnia karta w rzędzie.</p>
+          <a class="more" href="#etiam" data-page="etiam" data-fill="more">More</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="view" data-page-view="generic" id="generic" hidden>
+      <p class="kicker" data-fill="g-kicker">Generic</p>
+      <h1 class="page-title" data-fill="g-title">Generic Page</h1>
+      <div class="media media--ph page-media" data-img="pg" style="--img: url('https://picsum.photos/seed/ed-generic/1100/480')"></div>
+      <div class="prose">
+        <p data-fill="g-p1">Typowa podstrona treściowa: duży tytuł, zdjęcie pasowe i dwa–trzy akapity. Tu ląduje opis programu, działu albo dłuższy artykuł, który nie mieści się na stronie głównej.</p>
+        <p data-fill="g-p2">Drugi akapit rozwija temat: dla kogo jest oferta, jaki jest zakres i czego czytelnik może się spodziewać po kontakcie. Placeholder, który w widoku przykładowym zamienia się w konkret fundacji.</p>
+        <ul>
+          <li data-fill="g-l1">Punkt pierwszy — cel i odbiorca</li>
+          <li data-fill="g-l2">Punkt drugi — zakres i terminy</li>
+          <li data-fill="g-l3">Punkt trzeci — jak dołączyć</li>
+        </ul>
+        <p data-fill="g-p3">Na końcu wezwanie do dalszego czytania albo do kontaktu. Linki w menu prowadzą do osobnych widoków, nie do tej samej siatki wpisów.</p>
+      </div>
+    </section>
+
+    <section class="view" data-page-view="elements" id="elements" hidden>
+      <p class="kicker" data-fill="e-kicker">Elements</p>
+      <h1 class="page-title" data-fill="e-title">Elements</h1>
+      <div class="prose">
+        <p data-fill="e-lead">Zestaw treści, które zwykle lądują w bazie wiedzy: listy, cytat, dwa bloki obok siebie. W szkielecie to Elements, w przykładzie — publikacje.</p>
+      </div>
+      <div class="split">
+        <article>
+          <h2 data-fill="e-h1">Nagłówek A</h2>
+          <p data-fill="e-p1">Krótki blok: definicja, instrukcja albo spis treści publikacji. Placeholder lewej kolumny.</p>
+        </article>
+        <article>
+          <h2 data-fill="e-h2">Nagłówek B</h2>
+          <p data-fill="e-p2">Prawa kolumna na uzupełnienie: licencja, data aktualizacji, dla kogo jest materiał.</p>
+        </article>
+      </div>
+      <blockquote data-fill="e-quote">Cytat albo teza przewodnia, która zostaje w pamięci dłużej niż lista punktów.</blockquote>
+      <div class="posts">
+        <article class="post">
+          <h3 data-fill="e-c1-t">Pozycja 1</h3>
+          <p data-fill="e-c1-p">Opis pierwszej publikacji albo elementu.</p>
+        </article>
+        <article class="post">
+          <h3 data-fill="e-c2-t">Pozycja 2</h3>
+          <p data-fill="e-c2-p">Opis drugiej publikacji albo elementu.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="view" data-page-view="submenu" id="submenu" hidden>
+      <p class="kicker" data-fill="sm-kicker">Submenu</p>
+      <h1 class="page-title" data-fill="sm-title">Submenu</h1>
+      <div class="prose">
+        <p data-fill="sm-lead">Strona-spis dla gałęzi menu. Poniżej dwa wejścia, które w przykładzie stają się szkoleniami i wzorami dokumentów.</p>
+      </div>
+      <div class="split">
+        <article class="card-link">
+          <h2 data-fill="sm-a-t">Lorem Dolor</h2>
+          <p data-fill="sm-a-p">Wejście do pierwszej podstrony gałęzi.</p>
+          <a class="more" href="#lorem" data-page="lorem" data-fill="more">More</a>
+        </article>
+        <article class="card-link">
+          <h2 data-fill="sm-b-t">Ipsum Adipiscing</h2>
+          <p data-fill="sm-b-p">Wejście do drugiej podstrony gałęzi.</p>
+          <a class="more" href="#ipsum" data-page="ipsum" data-fill="more">More</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="view" data-page-view="lorem" id="lorem" hidden>
+      <p class="kicker" data-fill="l-kicker">Lorem Dolor</p>
+      <h1 class="page-title" data-fill="l-title">Lorem Dolor</h1>
+      <div class="media media--ph page-media" data-img="lorem" style="--img: url('https://picsum.photos/seed/ed-lorem/1100/420')"></div>
+      <div class="prose">
+        <p data-fill="l-p1">Pierwsza podstrona z submenu. Miejsce na program szkoleń, harmonogram albo artykuł z jednym zdjęciem.</p>
+        <p data-fill="l-p2">Drugi akapit: dla kogo, ile trwa, co trzeba przynieść. W widoku przykładowym — konkretne warsztaty fundacji.</p>
+        <ol>
+          <li data-fill="l-s1">Krok 1</li>
+          <li data-fill="l-s2">Krok 2</li>
+          <li data-fill="l-s3">Krok 3</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="view" data-page-view="ipsum" id="ipsum" hidden>
+      <p class="kicker" data-fill="i-kicker">Ipsum Adipiscing</p>
+      <h1 class="page-title" data-fill="i-title">Ipsum Adipiscing</h1>
+      <div class="prose">
+        <p data-fill="i-lead">Druga podstrona z submenu. Lista plików, wzorów albo materiałów do pobrania.</p>
+      </div>
+      <ul class="docs">
+        <li>
+          <strong data-fill="i-d1-t">Dokument 1</strong>
+          <span data-fill="i-d1-p">Krótki opis pliku i format.</span>
+        </li>
+        <li>
+          <strong data-fill="i-d2-t">Dokument 2</strong>
+          <span data-fill="i-d2-p">Krótki opis pliku i format.</span>
+        </li>
+        <li>
+          <strong data-fill="i-d3-t">Dokument 3</strong>
+          <span data-fill="i-d3-p">Krótki opis pliku i format.</span>
+        </li>
+        <li>
+          <strong data-fill="i-d4-t">Dokument 4</strong>
+          <span data-fill="i-d4-p">Krótki opis pliku i format.</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="view" data-page-view="etiam" id="etiam" hidden>
+      <p class="kicker" data-fill="et-kicker">Etiam Dolore</p>
+      <h1 class="page-title" data-fill="et-title">Etiam Dolore</h1>
+      <div class="media media--ph page-media" data-img="etiam" style="--img: url('https://picsum.photos/seed/ed-etiam/1100/420')"></div>
+      <div class="prose">
+        <p data-fill="et-p1">Osobna strona z menu: wolontariat, rekrutacja albo historia działania. Placeholder akapitu.</p>
+        <p data-fill="et-p2">Drugi akapit o tym, jak dołączyć, ile czasu to zajmuje i kogo szukacie. W przykładzie — nabór wolontariuszy.</p>
+      </div>
+      <div class="features">
+        <article><div class="icon">1</div><h3 data-fill="et-f1-t">Rola A</h3><p data-fill="et-f1-p">Opis pierwszej roli.</p></article>
+        <article><div class="icon">2</div><h3 data-fill="et-f2-t">Rola B</h3><p data-fill="et-f2-p">Opis drugiej roli.</p></article>
+        <article><div class="icon">3</div><h3 data-fill="et-f3-t">Rola C</h3><p data-fill="et-f3-p">Opis trzeciej roli.</p></article>
+      </div>
+    </section>
+
+    <section class="view" data-page-view="contact" id="contact" hidden>
+      <p class="kicker" data-fill="c-kicker">Kontakt</p>
+      <h1 class="page-title" data-fill="c-title">Adipiscing</h1>
+      <div class="split">
+        <form class="touch">
+          <p data-fill="c-lead">Formularz kontaktu. W szkielecie podpisany jak pozycja menu, w przykładzie — prawdziwy kontakt fundacji.</p>
+          <input data-ph="name" placeholder="Imię">
+          <input data-ph="email" placeholder="E-mail">
+          <textarea data-ph="message" rows="5" placeholder="Wiadomość"></textarea>
+          <button class="btn" type="button" data-fill="c-btn">Send</button>
+        </form>
+        <aside>
+          <h2 data-fill="c-h-addr">Adres</h2>
+          <p data-fill="c-addr">1234 Somewhere Road, Placeholder</p>
+          <h2 data-fill="c-h-mail">E-mail</h2>
+          <p data-fill="c-mail">hello@placeholder.tld</p>
+          <h2 data-fill="c-h-phone">Telefon</h2>
+          <p data-fill="c-phone">(000) 000-0000</p>
+        </aside>
+      </div>
+    </section>
+
+  </main>
+  <script>
+    (function () {
+      const side = document.getElementById("side");
+      const views = document.querySelectorAll("[data-page-view]");
+      const links = document.querySelectorAll("[data-page]");
+
+      function show(id) {
+        const next = document.querySelector('[data-page-view="' + id + '"]') ? id : "home";
+        views.forEach((view) => {
+          view.hidden = view.dataset.pageView !== next;
+        });
+        links.forEach((link) => {
+          link.classList.toggle("is-active", link.dataset.page === next && link.closest(".menu"));
+        });
+        side.classList.remove("is-open");
+        const heading = document.querySelector(".main .top");
+        if (heading) heading.scrollIntoView({ block: "start" });
+      }
+
+      document.getElementById("toggle").addEventListener("click", () => {
+        side.classList.toggle("is-open");
+      });
+
+      document.addEventListener("click", (e) => {
+        const link = e.target.closest("[data-page]");
+        if (!link) return;
+        e.preventDefault();
+        const id = link.dataset.page;
+        if (location.hash !== "#" + id) history.pushState({}, "", "#" + id);
+        show(id);
+      });
+
+      window.addEventListener("hashchange", () => {
+        show((location.hash || "#home").slice(1));
+      });
+
+      show((location.hash || "#home").slice(1));
+    })();
+  </script>
+</body>
+</html>

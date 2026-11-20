@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pl" data-template="story">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Story — szablon</title>
+  <link rel="stylesheet" href="../css/switcher.css">
+  <link rel="stylesheet" href="../css/templates/story.css">
+  <script src="../js/palettes.js"></script>
+  <script src="../js/examples.js"></script>
+  <script src="../js/switcher.js" defer></script>
+</head>
+<body class="story">
+  <nav class="dots">
+    <a href="#banner" class="is-on" aria-label="Banner"></a>
+    <a href="#spot1" aria-label="Spotlight 1"></a>
+    <a href="#spot2" aria-label="Spotlight 2"></a>
+    <a href="#spot3" aria-label="Spotlight 3"></a>
+    <a href="#gallery" aria-label="Gallery"></a>
+    <a href="#visit" aria-label="Visit"></a>
+  </nav>
+  <section class="banner" id="banner">
+    <div class="copy">
+      <h1 data-fill="b-title">Story</h1>
+      <p data-fill="b-text">A modular, highly tweakable one-page template. To jest element Banner: split 50/50, przycisk pill.</p>
+      <a class="pill" href="#spot1" data-fill="b-cta">Get Started</a>
+    </div>
+    <div class="media media--ph" data-img="b" style="--img: url('https://picsum.photos/seed/story-1/1100/900')"></div>
+  </section>
+  <section class="spot" id="spot1">
+    <div class="media media--ph" data-img="s1" style="--img: url('https://picsum.photos/seed/story-2/1100/900')"></div>
+    <div class="copy">
+      <h2 data-fill="s1-title">Spotlight</h2>
+      <p data-fill="s1-text">Naprzemienny blok tekst | obraz. Placeholder opisu motywu albo case study.</p>
+      <p class="more" data-fill="s1-more">Drugi akapit rozbudowuje historię: materiał, proces, dla kogo jest oferta i czego klient może się spodziewać po pierwszym kontakcie.</p>
+      <a class="pill" href="#spot2" data-fill="s1-cta">Dalej</a>
+    </div>
+  </section>
+  <section class="spot invert" id="spot2">
+    <div class="media media--ph" data-img="s2" style="--img: url('https://picsum.photos/seed/story-3/1100/900')"></div>
+    <div class="copy">
+      <h2 data-fill="s2-title">Invert</h2>
+      <p data-fill="s2-text">Ten sam Spotlight, ale z odwróconą paletą: ciemne tło, jasny tekst, ghost CTA.</p>
+      <p class="more" data-fill="s2-more">Tu warto dopisać konkret: terminy, wymiary, sposób zamówienia. Sekcja ma własny kontrast, żeby nie zlewała się z sąsiadami.</p>
+      <a class="pill" href="#spot3" data-fill="s2-cta">Pracownia</a>
+    </div>
+  </section>
+  <section class="spot" id="spot3">
+    <div class="media media--ph" data-img="s3" style="--img: url('https://picsum.photos/seed/story-4/1100/900')"></div>
+    <div class="copy">
+      <h2 data-fill="s3-title">Pracownia</h2>
+      <p data-fill="s3-text">Kolejny Spotlight: skąd biorą się rzeczy, kto je robi i jak wygląda dzień w warsztacie.</p>
+      <ul class="facts">
+        <li data-fill="s3-f1">Punkt 1 — materiał i pochodzenie</li>
+        <li data-fill="s3-f2">Punkt 2 — czas realizacji</li>
+        <li data-fill="s3-f3">Punkt 3 — pielęgnacja i gwarancja</li>
+      </ul>
+      <a class="pill" href="#gallery" data-fill="s3-cta">Galeria</a>
+    </div>
+  </section>
+  <section class="gallery" id="gallery">
+    <div class="gallery-head">
+      <p class="kicker" data-fill="g-kicker">Realizacje</p>
+      <h2 data-fill="g-title">Galeria</h2>
+      <p data-fill="g-text">Osobny pas pod spotlightami: własny odstęp, tło i nagłówek, żeby zdjęcia nie wchodziły w treść powyżej.</p>
+    </div>
+    <div class="gallery-grid">
+      <a class="media media--ph" href="#gallery" data-img="g1" style="--img: url('https://picsum.photos/seed/sg-1/500/400')"></a>
+      <a class="media media--ph" href="#gallery" data-img="g2" style="--img: url('https://picsum.photos/seed/sg-2/500/400')"></a>
+      <a class="media media--ph" href="#gallery" data-img="g3" style="--img: url('https://picsum.photos/seed/sg-3/500/400')"></a>
+      <a class="media media--ph" href="#gallery" data-img="g4" style="--img: url('https://picsum.photos/seed/sg-4/500/400')"></a>
+      <a class="media media--ph" href="#gallery" data-img="g5" style="--img: url('https://picsum.photos/seed/sg-5/500/400')"></a>
+      <a class="media media--ph" href="#gallery" data-img="g6" style="--img: url('https://picsum.photos/seed/sg-6/500/400')"></a>
+      <a class="media media--ph" href="#gallery" data-img="g7" style="--img: url('https://picsum.photos/seed/sg-7/500/400')"></a>
+      <a class="media media--ph" href="#gallery" data-img="g8" style="--img: url('https://picsum.photos/seed/sg-8/500/400')"></a>
+    </div>
+  </section>
+  <section class="closer" id="visit">
+    <div class="copy">
+      <h2 data-fill="v-title">Zamówienie</h2>
+      <p data-fill="v-text">Na koniec one-page’a: jak kupić, gdzie zobaczyć tkaniny na żywo i jak się odezwać. Placeholder kontaktu marki.</p>
+      <p class="more" data-fill="v-more">Pracownia przyjmuje wizyty po umówieniu. Wysyłka w kraju, zwroty 14 dni, metki z instrukcją prania w paczce.</p>
+      <a class="pill" href="#banner" data-fill="v-cta">Wróć na górę</a>
+    </div>
+  </section>
+</body>
+</html>
